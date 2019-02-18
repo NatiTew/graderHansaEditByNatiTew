@@ -1,0 +1,140 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>56160060</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff" style="margin-left:25">
+<HR>
+<H3><CENTER>Problem_1.java</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><div style="position:absolute;left:0"><A HREF="javascript:ZweiFrames('match4-0.html#0',2,'match4-top.html#0',1)"><IMG SRC="back.gif" ALT="other" BORDER="0" ALIGN="left"></A></div><B>import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+		Scanner kb = new Scanner(System.in);
+		int n = kb.nextInt();
+
+		LinkList StudInfo = new LinkList();</B></FONT>
+
+		for (int i = 0; i &lt; n; i++) {
+
+			int m = kb.nextInt();
+			for (int j = 0; j &lt; m; j++) {
+				String name = kb.next();
+				double height = kb.nextDouble();
+				String unit = kb.next();
+				switch (unit) {
+
+				case &quot;m&quot;:
+					StudInfo.insertStudInfo(name, height);break;
+				case &quot;dm&quot;:
+					StudInfo.insertStudInfo(name, height / 10.000000);break;
+				case &quot;cm&quot;:
+					StudInfo.insertStudInfo(name, height / 100.000000);break;
+				case &quot;mm&quot;:
+					StudInfo.insertStudInfo(name, height / 1000.000000);break;
+				}
+			}System.out.println();
+			StudInfo.display();
+		}
+
+	}
+
+	private static class LinkList {
+		private Link first;
+
+		public LinkList() {
+			first = null;
+		}
+
+		public void insertStudInfo(String name, double height) {
+			Link newLink = new Link(name,height);
+			if (first == null) {
+				newLink.next = first;
+				first = newLink;
+			} else {
+				
+				Link current = first;
+				
+				if (height &gt; current.sHeight) {
+					newLink.next = current;
+
+				} else if (height &lt; current.sHeight) {
+					newLink.next = current.next;
+					current.next = newLink;
+				} else {
+					if (name.compareToIgnoreCase(current.sName) &lt; 0) {
+						newLink.next = current;
+						current.next = newLink;
+					} else {
+						newLink.next = current.next;
+						current.next = newLink;
+					}
+				}
+				current = current.next;
+
+				while (current.next != null) {
+					if (height &gt; current.sHeight) {
+						newLink.next = current;
+
+					} else if (height &lt; current.sHeight) {
+						newLink.next = current.next;
+						current.next = newLink;
+					} else {
+						if (name.compareToIgnoreCase(current.sName) &lt; 0) {
+							newLink.next = current;
+							current.next = newLink;
+						} else {
+							newLink.next = current.next;
+							current.next = newLink;
+						}
+					}
+					current = current.next;
+				}
+			}
+		}
+		public void display(){
+			
+			Link current = first;
+			while(current!=null){
+			current.display();
+			current = current.next;
+			}
+			
+			
+		}
+		// /////////////////////////////////////////////////////////////////
+	}
+
+	private static class Link {
+
+		public String sName;
+		public double sHeight;
+
+		public Link next;
+
+		public Link(String name, double height) {
+			sName = name;
+			sHeight = height;
+
+		}
+
+		public void display() {
+			
+			System.out.println(sName);
+		}
+	}
+}
+</PRE>
+</BODY>
+</HTML>

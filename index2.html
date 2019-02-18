@@ -1,0 +1,50 @@
+<?php
+session_start();
+session_destroy();
+?>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Grader Hansa | Computer The Cyber Tower</title>
+         
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+        <script src="bootstrap/js/bootstrap.js"></script>
+         
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <script type="text/javascript" src="js\jquery-2.1.1\jquery.min.js"></script>
+        <script type="text/javascript" src="js\script.js"></script>
+
+        <meta property="og:url"           content="https://smart.cs.buu.ac.th/grad/" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="Game Grader Hansa" />
+        <meta property="og:description"   content="Game Grader Hansa : Computer The Cyber Tower" />
+        <meta property="og:image"         content="https://smart.cs.buu.ac.th/grad/Image/bg/pgdh3.jpg" />
+         
+    </head>
+<body>
+<div class="jumbotron text-center">
+  <h1>Computer The Cyber Tower</h1>
+  <p>Grader Hansa : Burapha University</p> 
+</div>
+  
+<div class="container">
+    <div align="left" class="login">
+    <h3 class="login-heading">
+        <strong>Welcome.</strong> Please login.</h3>
+        <form method="post" action="authen.php">
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="text" class="form-control" name="id" placeholder="Enter Username" required="required">
+            </div>
+            <div class="form-group">
+                <label for="pwd">Password:</label>
+                <input type="password" name="pass" class="form-control" placeholder="Enter password" required="required">
+            </div>
+            <button type="submit" class="btn btn-default" VALUE=" Login ">Sign in</button>
+        </form>
+    </div>
+</div>
+<script src="js/indexLogin.js"></script>
+</body>
+</html>

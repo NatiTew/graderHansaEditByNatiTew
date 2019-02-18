@@ -1,0 +1,60 @@
+/* Version 1: 24/7 */
+Input:
+5
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Greentea 1
+Fanta 1
+Fanta 1
+Pepsi 1
+Soda 1
+Water 5
+Water 1
+Fanta 5
+Pepsi 4
+Pepsi 1
+*
+
+Output:
+Greentea 5 Fanta 5 Pepsi 5 Soda 1 Water 5 
+Greentea 4 Water 1 Fanta 2 Pepsi 1
+
+/* Version 2: Santa */
+Input:
+1
+Car 8
+Lollipop 1
+Car 2
+Doll 5
+Kart 7
+Lollipop 2
+Car 8
+Toy 4
+Choco 8
+Kart 7
+Kart 5
+Toy 5
+Pepsi 6
+ToyToy 2
+Kart 7
+Kart 3
+ToyToy 1
+Toy 8
+Toy 10
+Funny 2
+Doll 1
+Car 10
+Car 6
+*
+
+Output:
+Car 1 Lollipop 1 Doll 1 Kart 1 Toy 1 Choco 1 Pepsi 1 ToyToy 1 Funny 1 
+Car 33 Doll 5 Kart 28 Lollipop 2 Toy 26 Choco 7 Pepsi 5 ToyToy 2 Funny 1 
+
+

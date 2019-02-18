@@ -1,0 +1,2 @@
+odd
+odd = 1, even = 0

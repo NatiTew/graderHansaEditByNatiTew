@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<application id="manage" mode="Debug">
+  <paths>
+	<using namespace="Application.common.*" />
+	<using namespace="System.Data.*" />
+	<using namespace="System.Data.ActiveRecord.*" />
+	<using namespace="System.Data.ActiveRecord.Scaffold.*" />
+	<using namespace="Application.database.*" />
+  </paths>
+
+  <!-- configurations for modules -->
+  <modules>
+	<module class="TActiveRecordConfig">
+		<!-- db file is relative to the index.php -->
+		<database ConnectionString="mysql:host=localhost;dbname=ioi" 
+		Username="root" Password="intel266" />
+	</module>
+  </modules>
+
+  <!-- configuration for available services -->
+  <services>
+    <service id="page" class="TPageService" DefaultPage="Home" />
+  </services>
+</application>

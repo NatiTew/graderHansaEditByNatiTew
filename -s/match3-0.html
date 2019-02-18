@@ -1,0 +1,80 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<HTML>
+<HEAD>
+ <TITLE>std2</TITLE>
+<META http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <script type="text/javascript">
+  <!--
+   function ZweiFrames(URL1,F1,URL2,F2)
+   {
+    parent.frames[F1].location.href=URL1;
+    parent.frames[F2].location.href=URL2;
+   }
+  //-->
+  </script>
+</HEAD>
+<BODY BGCOLOR="#ffffff">
+<HR>
+<H3><CENTER>Problem_1.java</CENTER></H3><HR>
+<PRE>
+<A NAME="0"></A><FONT color="#0000ff"><A HREF="javascript:ZweiFrames('match3-1.html#0',3,'match3-top.html#0',1)"><IMG SRC="forward.gif" ALT="other" BORDER="0" ALIGN="right"></A><B>import java.util.Scanner;
+
+public class Test2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // TODO code application logic here        
+        Scanner scan  = new Scanner(System.in);  
+     //   String major  = a.next();         
+      //  String Room = a.next();  
+     //   String Line1 = &quot;1 0 1 0 0&quot;;
+     //   String Line2 = &quot;0 1 1 1 0&quot;;
+     //   String Line3 = &quot;0 1 0 1 0&quot;;
+     //   String Line4 = &quot;1 0 0 1 0&quot;;
+     //   String Line5 = &quot;0 0 1 1 1&quot;;
+        String[] Lines = new String[6];</B></FONT>
+    //   Lines[0] = Line1;
+    //    Lines[1] = Line2;
+    //    Lines[2] = Line3;
+    //    Lines[3] = Line4;
+     //   Lines[4] = Line5;     
+        int k = 0;
+        Boolean chk = true;
+        for(int i =0; i&lt; 5;i++){              
+            Lines[i] = scan.nextLine();
+            int a =  Integer.parseInt(Lines[i].substring(0, 1)) ;
+           //  System.out.print(&quot;a&quot;+a);
+            a+=  Integer.parseInt(Lines[i].substring(2, 3)) ; 
+           //  System.out.print(&quot;a&quot;+a);
+            a+=  Integer.parseInt(Lines[i].substring(4, 5)) ; 
+           //  System.out.print(&quot;a&quot;+a);
+            if( a&gt;2){
+            k = 2; 
+           
+              // System.out.print(&quot;ccccccc&quot;+Integer.parseInt(Lines[i].substring(6, 7)) );
+            }
+             a+=  Integer.parseInt(Lines[i].substring(6, 7)) ;
+            if (a&gt;2){
+             k = 3; 
+            }
+             //  System.out.print(&quot;abbbbbbbb&quot;+a + &quot; K&quot;+k);
+            a+=  Integer.parseInt(Lines[i].substring(8, 9))  ;
+            if( a&gt;2){
+             k =4;  
+            }            
+            if(a%2==1){
+             chk = false;
+             System.out.println(i+&quot; &quot;+k);
+            } 
+            a = 0;
+        }
+         if(chk){
+          System.out.println(&quot;-1 -1&quot;);
+        }
+    }
+}
+</PRE>
+</BODY>
+</HTML>

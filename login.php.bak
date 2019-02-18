@@ -1,0 +1,48 @@
+<?php
+session_start();
+session_destroy();
+?>
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+</head>
+
+<body>
+<form method="post" action="authen.php">
+
+<center><b>
+<?php
+
+if(isset($_GET['error'])) {
+  $p_error = $_GET['error'];
+  if($p_error==1) {
+    echo 'wrong password, please login again<br><br>';
+  }
+}
+?>
+</b></center>
+
+	 <CENTER>
+	 <h2 align=center>Grader 886210 : Data Structure and Algorithm</h2><br>
+	 <h4 align=center>LOGIN</h4>
+	 <TABLE BORDER="0" WIDTH="300" ALIGN=CENTER CLASS=bold>
+	  <TR>
+		<TD> Username : </TD>
+		<TD> <INPUT  TYPE="text" NAME="id"> </TD>
+	  </TR>
+	  <TR>
+	    	<TD> Password : </TD>
+		<TD> <INPUT TYPE="Password" NAME="pass" > </TD>
+	  </TR>
+	  <TR ALIGN=center>
+	    <TD COLSPAN=2> <INPUT TYPE=submit VALUE=" Login "> </TD>
+	  </TR>
+	  <TR ALIGN=center>
+	    <TD COLSPAN=2><br><a href="./GraderManual.pdf">Grader Manual</a> </TD>
+	  </TR>
+	</TABLE>
+
+</form>
+</body>
+</html>

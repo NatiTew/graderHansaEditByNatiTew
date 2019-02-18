@@ -1,0 +1,6 @@
+odd
+even
+odd
+odd
+even
+odd = 3, even = 2

@@ -1,0 +1,5 @@
+cases: 10
+evaluator: ..\scomp.exe
+timelimit: 1
+
+

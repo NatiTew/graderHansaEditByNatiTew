@@ -1,0 +1,117 @@
+body {
+    font-family: "Lato", sans-serif;
+}
+
+/* On the flex container */
+.flexcontainer {
+   display: -webkit-flex;
+   display: flex;
+   -webkit-align-items: center;
+   align-items: center;
+   -webkit-justify-content: center;
+   justify-content: center;
+   /* You can set flex-wrap and flex-direction individually */
+   -webkit-flex-direction: row;
+   flex-direction: row;
+   -webkit-flex-wrap: wrap;
+   flex-wrap: wrap;
+   /* Or do it all in one line with flex flow */
+   -webkit-flex-flow: row wrap;
+   flex-flow: row wrap;
+   /* tweak the where items line up on the row */
+   /* valid values are: flex-start, flex-end, space-between, space-around, stretch */
+   -webkit-align-content: flex-end;
+   align-content: flex-end;
+   
+     
+   
+
+}
+.flex-item {
+    background-color: cornflowerblue;
+    border-style: outset;
+    width: auto;
+    height: auto;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.vertical-menu {
+   width: 600px;
+    height: 250px;
+    overflow-y: auto;
+    margin: 50px auto 0 auto;
+  position: relative;
+    filter: chroma(color=#000000);  
+}
+
+.vertical-menu a {
+     
+    color: black;
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.vertical-menu a:hover {
+    background-color: #060201;
+}
+
+.vertical-menu a.active {
+    color: white;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.fsSubmitButton{
+  padding: 10px 20px 11px !important;
+  font-size: 21px !important;
+  background-color: #F36C8C;
+  font-weight: bold;
+  text-shadow: 1px 1px #F36C8C;
+  color: #ffffff;
+  border-radius: 100px;
+ -moz-border-radius: 100px;
+ -webkit-border-radius: 100px;
+ border: 1px solid #F36C8C;
+ cursor: pointer;
+ box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+ -moz-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+ -webkit-box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset;
+}
